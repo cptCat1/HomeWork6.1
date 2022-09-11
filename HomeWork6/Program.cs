@@ -1,4 +1,54 @@
-﻿//HomeWork6.3---------------------------------------------
+﻿//HomeWork6.1---------------------------------------------
+/*Contains   proverka na nalichie simvola
+EndsWith     proverka konca stroki na simvol
+StartsWith   proverka nachala stroki na simvol
+Join         soediniaet el massiva i stavit zadannyj razdelitel meghdu nimi
+LastIndexOf  vozvrat pozicii indeksa, libo -1
+*/
+
+
+
+//HomeWork6.2---------------------------------------------
+/*using System;
+
+static void Action1(int num1, int num2)
+{
+    return num1 + num2;
+}
+---void ne vozvrashaemyj tip 
+
+static int Action1(int num1; int num2)
+        {
+    return num1 + num2;
+}
+---parametry cherez zapiatuju
+
+static int Action1(int num1, int[] num2)
+{
+    return num1 + num2;
+}
+---nevozmozhno slozhyt tipy dannyh int i int[]
+
+static int Action1(int num1, int num2)
+            return num1 + num2;
+---telo metoda neobhodimo vlozhit v {}
+
+static Action1(int num1, int num2)
+{
+    return num1 + num2;
+}
+---chtoby vernut rezultat neobhodimo ukazat tip pri objavlenii metoda
+
+static int Action1(num1, num2)
+{
+    return num1 + num2;
+}
+---ne ukazan tip dannyh v parametrah
+*/
+
+
+
+//HomeWork6.3---------------------------------------------
 //a-------------------------------------------------------
 
 //Console.WriteLine("Введите число, возводимое в квадрат:");
@@ -46,26 +96,32 @@
 
 //d-------------------------------------------------------
 
-//int[] Array = { 11, 12, 13, 14, 15 };
-//Console.WriteLine("Введите число, которое вы ищете:");
-//int FindNum = int.Parse(Console.ReadLine());
+//ne 
 
-//int NumIndex = Find(Array, FindNum);
-//Console.WriteLine(NumIndex);
+/*int[] Array = { 11, 12, 13, 14, 15 };
+Console.WriteLine("Введите число, которое вы ищете:");
+int FindNum = int.Parse(Console.ReadLine());
 
-//int Find(int[] Nums, int Num)
-//{
-//    for (int i = 0; i <= Nums.Length; i++)
-//        if (Nums[i] == Num)
-//        {
-//            return i;
-//        }
-//        return -1;
-//}
+int NumIndex = Find(Array, FindNum);
+Console.WriteLine(NumIndex);
 
+//d1
+
+int Find(int[] Nums, int Num)
+{
+    for (int i = 0; i <= Nums.Length; i++)
+        if (Nums[i] == Num)
+        {
+            return i;
+        }
+    return -1;
+}
+*/
 //e-------------------------------------------------------
 
-int[] Array = { 11, 12, 13, 14, 15 };
+//ne rabotaet
+
+/*int[] Array = { 11, 12, 13, 14, 15 };
 
 int[] NewArray = Invert(Array);
 Console.WriteLine(NewArray[0]);
@@ -74,7 +130,13 @@ int[] Invert(int[] Nums)
 {
     for (int i = 0; i < Nums.Length; i++)
     {
-
+        for (int j = Nums.Length - 1; j >= 0; j--)
+        {
+            int t = Nums[j];  4 3 2 1 0
+            Nums[j] = Nums[i];0 1 2 3 4
+            Nums[i] = t;      4 3 2 1 0
+        }
     }
-    return
+    return Nums;
 }
+*/
