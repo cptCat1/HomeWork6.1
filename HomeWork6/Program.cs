@@ -141,4 +141,44 @@ int[] Invert(int[] Nums)
 }
 */
 
+/*//HomeWork6.4
+
+string camelCase = "domenIncModelCommonFile";
+
+string uri = toUri(camelCase);
+Console.WriteLine(uri);
+
+string toUri(string str)
+{
+    //разбить строку на массив по признаку большой буквы
+    char[] letters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
+        'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+    string[] words = { };
+    foreach (char s in str)
+    {
+        for (int i = 0; i < str.Length; i++)
+        {
+            for (int j = 0; j < letters.Length; j++)
+            {
+                if (str[i] == letters[j])
+                {
+                    words = new string[] { str.Substring(0,) }
+
+
+                    //заменить в каждом элементе массива большую букву на маленькую
+                    string strLower = str.ToLower();
+                    //записать все элементы массива в одну строку через /
+                    //вернуть string
+
+
+                }
+            }
+        }
+    }
+    return str;
+
+
+}
+*/
+
 
