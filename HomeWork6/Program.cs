@@ -191,7 +191,7 @@ string Uri(string Address)
         }
     }
     Way = "";
-    foreach (string W in Ways)
+    foreach (string W in Ways) 
     Way += W + "/";
     Way = Way.Substring(0, Way.Length - 1);
     return Way;
