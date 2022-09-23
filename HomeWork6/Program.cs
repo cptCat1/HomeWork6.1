@@ -148,96 +148,8 @@ int[] Invert(int[] Nums)
 }
 
 */
-/*//HomeWork6.4
+//HomeWork6.4
 
-string camelCase = "domenIncModelCommonFile";
-
-string uri = toUri(camelCase);
-Console.WriteLine(uri);
-
-string toUri(string str)
-{
-    //разбить строку на массив по признаку большой буквы
-    char[] letters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
-        'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-    string[] words = { };
-    foreach (char s in str)
-    {
-        for (int i = 0; i < str.Length; i++)
-        {
-            for (int j = 0; j < letters.Length; j++)
-            {
-                if (str[i] == letters[j])
-                {
-                    words = new string[] { str.Substring(0,) }
-
-
-                    //заменить в каждом элементе массива большую букву на маленькую
-                    string strLower = str.ToLower();
-                    //записать все элементы массива в одну строку через /
-                    //вернуть string
-
-
-                }
-            }
-        }
-    }
-    return str;
-
-
-}
-*/
-
-
-/*string CamelCase = "";
-*//*
-domen
-Inc
-Model
-Common
-File
-*//*
-string[] uri = Uri(CamelCase);
-Console.WriteLine(uri);
-char.IsUpper(CamelCase[4]);
-CamelCase[4].
-string Uri(string Line)
-{
-    string[] Text = Line.Split('A-Z');
-    return Text;
-}
-*/
-
-/*using System;
-
-string CamelCase = "domenIncModelCommonFile";
-string AddressUri = Uri(CamelCase);
-Console.WriteLine(AddressUri);
-
-string Uri(string Address)
-{
-    string AddressUri = "";
-    int ArrayLength = 1;
-    foreach (char Char in Address)
-    {
-        if (char.IsUpper(Char))
-        {
-            ArrayLength++;
-        }
-    }
-
-    string[] Ways = new string[ArrayLength];
-    for (int i = 0; i < Ways.Length; i++)
-    {
-
-    }
-
-
-
-
-    return AddressUri;
-}
-*/
 using System;
 
 string CamelCase = "domenIncModelCommonFile";
@@ -246,15 +158,13 @@ Console.WriteLine(AddressUri);
 
 string Uri(string Address)
 {
-    string AddressUri = "";
+    string Way = "";
     int NewArrayLength = 1;
-    int Index = 0;
-    int AddressLenght = 0;
-    int j = 0;
+    int IndexString = 0;
+    int IndexChar = 0;
 
     foreach (char Char in Address)
     {
-        AddressLenght++;
         if (char.IsUpper(Char))
         {
             NewArrayLength++;
@@ -262,40 +172,29 @@ string Uri(string Address)
     }
     string[] Ways = new string[NewArrayLength];
 
-    foreach (char Char in Address)
-    {
-        if (char.IsUpper(Char))
-        {
-            Index = Address.IndexOf(Char);
-
-            Console.WriteLine(Char);
-            Console.WriteLine("{0}, {1}, {2}", Index, NewArrayLength, AddressLenght);
-            Console.WriteLine("{0}", Address.Substring(Index));
-
-        }
-
-    }
-
-/*    foreach (char Char in Address)
-    {
-        if (char.IsUpper(Char))
-        {
-            Index = Address.IndexOf(Char);
-        }
-
-    }
-
-
     for (int i = 0; i < Address.Length; i++)
     {
         if (char.IsUpper(Address[i]))
         {
-            Ways[j] = Address.Substring(0, Index);
-            Console.WriteLine(Ways[j]);
+            Way = Address.Substring(IndexChar, i - IndexChar);
+            Ways[IndexString] = Way;
+            Ways[IndexString] = Ways[IndexString].ToLower();
+            IndexString++;
+            IndexChar = i;
         }
 
+        if (i == Address.Length - 1)
+        {
+            Way = Address.Substring(IndexChar, (i - IndexChar) + 1);
+            Ways[IndexString] = Way;
+            Ways[IndexString] = Ways[IndexString].ToLower();
+        }
     }
-*/
-
-    return AddressUri;
+    Way = "";
+    foreach (string W in Ways)
+    Way += W + "/";
+    Way = Way.Substring(0, Way.Length - 1);
+    return Way;
 }
+
+
