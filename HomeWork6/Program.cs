@@ -152,7 +152,7 @@ int[] Invert(int[] Nums)
 
 using System;
 
-string CamelCase = "domenIncModelCommonFile";
+string CamelCase = "nuDavajPridumaem";
 string AddressUri = Uri(CamelCase);
 Console.WriteLine(AddressUri);
 
@@ -191,10 +191,11 @@ string Uri(string Address)
         }
     }
     Way = "";
-    foreach (string W in Ways) 
-    Way += W + "/";
+    foreach (string W in Ways)
+        Way += W + "/";
     Way = Way.Substring(0, Way.Length - 1);
     return Way;
 }
+//insert
 
 
