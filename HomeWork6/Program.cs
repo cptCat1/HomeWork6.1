@@ -156,7 +156,7 @@ string CamelCase = "nuDavajPridumaem";
 string AddressUri = Uri(CamelCase);
 Console.WriteLine(AddressUri);
 
-string Uri(string Address)
+/*string Uri(string Address)
 {
     string Way = "";
     int NewArrayLength = 1;
@@ -196,6 +196,18 @@ string Uri(string Address)
     Way = Way.Substring(0, Way.Length - 1);
     return Way;
 }
-//insert
+*///insert
+
+string Uri(string camelCase)
+{
+    string way = "";
+    for (int i = 0; i < camelCase.Length; i++)
+    {
+        if (char.IsUpper(camelCase[i])) 
+            way += "/";
+        way += camelCase[i];
+    }
+    return way.ToLower();
+}
 
 
